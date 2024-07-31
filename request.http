@@ -1,0 +1,64 @@
+POST http://localhost:4000/register
+Content-Type: application/json
+
+{
+    "first_name": "dfhks",
+    "last_name": "shjk",
+    "username": "jokjs44",
+    "password": "1234pass"
+
+}
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "jokjs44",
+    "password": "rs"
+}
+###
+POST http://localhost:4000/add-product
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.NA.Tc-vaYb9gsdwOqh_PrXkiSR0dXAYFFSz1woZI5kLlZs
+Content-Type: application/json
+
+
+{"title": "jeans", "price": "300", "company":"ethio", "description": "sdfsdf"}
+
+###
+GET http://localhost:4000/all-products
+
+###
+
+GET http://localhost:4000/my-product
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.NA.Tc-vaYb9gsdwOqh_PrXkiSR0dXAYFFSz1woZI5kLlZs
+ 
+###
+
+DELETE http://localhost:4000/delete-product
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.Mw.hxrbjjwZ_0J_5VJpRJ6V90ROcNAojsUAOAxF-qjkIUo
+Content-Type: application/json
+
+{"id": 3}
+
+###
+
+POST http://localhost:4000/mark-as-sold
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.Mw.hxrbjjwZ_0J_5VJpRJ6V90ROcNAojsUAOAxF-qjkIUo
+Content-Type: application/json
+
+{
+    "id": 4
+}
+
+###
+
+PATCH  http://localhost:4000/update-product
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.Mw.hxrbjjwZ_0J_5VJpRJ6V90ROcNAojsUAOAxF-qjkIUo
+Content-Type: application/json
+
+{
+    "id": 6,
+    "title": "tee",
+    "price": "345",
+    "description": "hskfhkdjhf"
+}
